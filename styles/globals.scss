@@ -1,15 +1,8 @@
 @import "bootstrap.css";
 @import "font.css";
 
-
-.top-section{
-    width: 100%;
-    height: 100vh;
-    background-image: url("../public/img/nardane-bg.png");
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    z-index: 2;
+html, body{
+    background-image: linear-gradient(to bottom ,#141c53 ,#333e8a );
 }
 
 input, select{
@@ -40,11 +33,21 @@ input, select{
 
 
 .img-hendevaneh{
-    position: absolute;
-    z-index: 2;
+    position: absolute !important;
+    z-index: 0;
 }
 
 @media (max-width: 767px) {
+    .top-section{
+        width: 100%;
+        height: 30%;
+        background-image: url("../public/img/hendavaneh2.png");
+        background-size: 100% , 100%;
+        background-position: top;
+        background-repeat: no-repeat;
+        background-attachment: unset;
+        z-index: 2;
+    }
     .img1{
         right: -30%;
         bottom: -10%;
@@ -94,16 +97,70 @@ input, select{
             }
         }
     }
+    .img4{
+        right: -100%;
+        top: -30%;
+        transform: scale(0.1) rotate(0)  translateY(50px);
+        transform-origin: center;
+        opacity: 0.2;
+        filter: drop-shadow(5px 5px 5px #69761a);
+        animation: img4 5s linear alternate infinite;
+        @at-root {
+            @keyframes img4 {
+                to{
+                    transform: scale(0.1) rotate(0) translateY(-50px);
+                }
+            }
+        }
+    }
+    .img5{
+        left: -100%;
+        top: -30%;
+        transform: scale(0.1) rotate(0)  translateY(50px);
+        transform-origin: center;
+        opacity: 0.5;
+        filter: drop-shadow(5px 5px 5px #69761a);
+        animation: img5 5s linear alternate infinite;
+        @at-root {
+            @keyframes img5 {
+                to{
+                    transform: scale(0.1) rotate(0) translateY(-50px);
+                }
+            }
+        }
+    }
 
     .align {
         clear: both;
         width: 100%;
-        transform: scale(0.7);
+        transform: scale(0.9);
         text-align: center;
+    }
+    .book {
+        position: relative;
+        width: 160px;
+        height: 220px;
+        -webkit-perspective: 1000px;
+        -moz-perspective: 1000px;
+        perspective: 1000px;
+        -webkit-transform-style: preserve-3d;
+        -moz-transform-style: preserve-3d;
+        transform-style: preserve-3d;
     }
 
 }
 @media (min-width: 768px) {
+    .top-section{
+        width: 100%;
+        height: 50vh;
+        background-image: url("../public/img/hendavaneh2.png");
+        background-size: 70% , 80%;
+        background-position:left top;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        z-index: 2;
+    }
+
     .img1{
         right: 2%;
         transform: scale(0.6) rotate(-20deg)  translateY(50px);
@@ -150,6 +207,38 @@ input, select{
             }
         }
     }
+    .img4{
+        right: 0;
+        top: 10%;
+        transform: scale(0.1) rotate(0);
+        transform-origin: center;
+        opacity: 0.1;
+        filter: drop-shadow(5px 5px 5px #69761a);
+        animation: img4 5s linear alternate infinite;
+        @at-root {
+            @keyframes img4 {
+                to{
+                    transform: scale(0.1) rotate(45deg) ;
+                }
+            }
+        }
+    }
+    .img5{
+         left: 0;
+         top: -30%;
+         transform: scale(0.1) rotate(0)  translateY(80px);
+         transform-origin: center;
+         opacity: 0.5;
+         filter: drop-shadow(5px 5px 5px #69761a);
+        animation: img5 5s linear alternate infinite;
+        @at-root {
+            @keyframes img5 {
+                to{
+                    transform: scale(0.1) rotate(45deg) ;
+                }
+            }
+        }
+     }
     .barg{
         position: absolute;
         left: 5%;
@@ -166,9 +255,47 @@ input, select{
         width: 100%;
         text-align: center;
     }
+    .book {
+        position: relative;
+        width: 160px;
+        height: 220px;
+        -webkit-perspective: 1000px;
+        -moz-perspective: 1000px;
+        perspective: 1000px;
+        transform: translateY(-10%) scale(1.2);
+        -webkit-transform-style: preserve-3d;
+        -moz-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+    }
 
 }
+@media (min-width: 1025px) {
+    .book {
+        position: relative;
+        width: 160px;
+        height: 220px;
+        -webkit-perspective: 1000px;
+        -moz-perspective: 1000px;
+        perspective: 1000px;
+        transform: translateY(-70%) scale(2);
+        -webkit-transform-style: preserve-3d;
+        -moz-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+    }
+}
+@media (min-width: 1200px) {
+    .top-section{
+        width: 100%;
+        height: 70vh;
+        background-image: url("../public/img/hendavaneh2.png");
+        background-size: 70% , 80%;
+        background-position:left top;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        z-index: 2;
+    }
 
+}
 
 .component{
 
@@ -204,19 +331,7 @@ input, select{
     }
 
 
-
-
-    .book {
-        position: relative;
-        width: 160px;
-        height: 220px;
-        -webkit-perspective: 1000px;
-        -moz-perspective: 1000px;
-        perspective: 1000px;
-        -webkit-transform-style: preserve-3d;
-        -moz-transform-style: preserve-3d;
-        transform-style: preserve-3d;
-    }
+    
 
     /*
         2. background & color
@@ -822,6 +937,7 @@ input, select{
 }
 
 
+
 .popup{
     position: fixed;
     top: 0;
@@ -832,24 +948,31 @@ input, select{
     align-items: center;
     transition: .6s;
     z-index: 10;
+    .section{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img{
+            border-radius: 65px;
+            padding: 0;
+            margin: 0;
+            box-shadow:0 0 80px 750px rgba(0, 0, 0, 0.58);
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
 }
-.popup > .section{
-    box-shadow:0 0 55px 650px rgba(0, 0, 0, 0.58);
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    border-radius: 10px;
-    display: flex;
-    overflow: hidden;
-    padding: 5px;
-    justify-content: center;
-    align-items: center;
-    background: rgb(2, 16, 63) url("../public/img/hendevaneh.png") left;
-    background-size: 20% , 20%;
-}
-.popup > .section img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.invite{
+    transform: translateY(-100);
+    animation: invite 1s ease-in-out forwards ;
+    @at-root {
+        @keyframes invite {
+            to{
+                transform: translateY(0);
+            }
+        }
+    }
 }
 
 

@@ -16,22 +16,6 @@ function Book({setStatusPopup}) {
 
     }
 
-    // document.getElementById("openbook").addEventListener("click" , ()=>{
-    //     document.getElementsByClassName("book")[0].classList.add("open")
-    //     document.getElementsByClassName("page")[0].classList.add("open")
-    //     setTimeout(()=>{
-    //         document.getElementsByClassName("popup")[0].style.visibility = "visible"
-    //         document.getElementsByClassName("popup")[0].style.opacity = "1"
-    //     },2000)
-    //     document.getElementsByClassName("popup")[0].addEventListener("click" , ()=>{
-    //         document.getElementsByClassName("popup")[0].style.visibility = "hidden"
-    //         document.getElementsByClassName("popup")[0].style.opacity = "0"
-    //     })
-    // })
-    // document.getElementById("closebook").addEventListener("click" , ()=>{
-    //     document.getElementsByClassName("book")[0].classList.remove("open")
-    //     document.getElementsByClassName("page")[0].classList.remove("open")
-    // })
 
     return (
         <>
@@ -97,7 +81,7 @@ function Book({setStatusPopup}) {
                     </li>
                 </ul>
                <div className="col-12 d-flex justify-content-center align-items-center">
-                   <button onClick={getFal} className="col-6 col-xl-3 btn-accept border-0 rounded p-2 text-light ">فال من</button>
+                   <button onClick={getFal} className="col-9 col-xl-3 btn-accept border-0 rounded p-2 text-light">فال بگیر</button>
                </div>
             </div>
         </>
